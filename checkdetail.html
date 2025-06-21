@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Supermarket-Checkoutdetail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/checkdetail.css">
+</head>
+<body>
+     <div class="main">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="main.html">Online Market</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder ="What are your looking for?">
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="cell-center">
+                <i class="fa-solid fa-phone-volume"></i>
+                Cell center<br> 0692222888
+            </div>
+            <div class="wishlish-icon">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+                <a href="addtocart.html" class="cart-icon"><i class="fa-solid fa-shopping-cart"></i> <span id="cart-item-count">0</span></a>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <ul>
+                <li><a href="newproduct.html">New Products</a></li>
+                <li><a href="#">Best Sales</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li><a href="#">Quick find</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Daily Offers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="checkout-container">
+        <h2 class="cart-title">Cart</h2>
+        <div class="cart-progress">
+            <div><span><a href="addtocart.html">1. Shopping Cart</a></span> <span class="arrow">&#8594;</span></div>
+            <div class="active"><span style="color: blue;">2. Checkout Detail</span> <span class="arrow">&#8594;</span></div>
+            <div>3. Order Complete</div>
+        </div>
+
+        <div class="coupon-section">
+            <h3>Have a coupon? <a href="#">Click here to enter your code</a></h3>
+        </div>
+
+        <div class="checkout-details">
+            <div class="billing-details">
+                <div class="section-title">Billing details</div>
+                <div class="form-group">
+                    <label for="first_name">First name</label>
+                    <input type="text" id="first_name">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="company_name">Company name (optional)</label>
+                    <input type="text" id="company_name">
+                </div>
+                <div class="form-group">
+                    <label for="country_region">Country / Region</label>
+                    <input type="text" id="country_region">
+                </div>
+                <div class="form-group">
+                    <label for="street_address">Street address</label>
+                    <input type="text" id="street_address" placeholder="House number and street name">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="apartment" placeholder="Apartment, suite, unit, etc. (optional)">
+                </div>
+                <div class="form-group">
+                    <label for="town_city">Town / City</label>
+                    <input type="text" id="town_city">
+                </div>
+                <div class="form-group">
+                    <label for="state">State</label>
+                    <input type="text" id="state">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email_address">Email address</label>
+                    <input type="email" id="email_address">
+                </div>
+            </div>
+
+            <div class="your-order">
+                <div class="section-title">Your order</div>
+                <div class="order-table-container">
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+                <div class="payment-info">
+                    <div class="payment-unavailable">
+                        <p>Sorry, it seems that there are not available payment methods. Please contact us if your require assistance or wish to make alternate arrangements.</p>
+                    </div>
+                    <button class="place-order-button" disabled>Place order</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="additional-information">
+            <div class="section-title">Additional information</div>
+            <div class="form-group">
+                <label for="order_notes">Order notes (optional)</label>
+                <textarea id="order_notes" rows="5" placeholder="Notes about your order, e.g., special notes for delivery."></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="JAVA_SCRIPT/Checkdetail.js"></script>
+</body>
+</html>

@@ -1,0 +1,992 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 20px;
+}
+
+/* Main Header Section (.main) */
+.main {
+    background-color: #943434; /* Red background for the top bar */
+    color: white;
+}
+
+.header-container { /* Specific container for the top header row */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-right: 20px;
+}
+
+.logo i {
+    margin-right: 15px;
+}
+
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+.logo a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+.search {
+    display: flex;
+    flex-grow: 1;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #ffffff; /* White background for search input */
+    border: none; /* Remove default border */
+}
+
+.search input {
+    background-color: transparent; /* Make input background transparent to show parent color */
+    border: none; /* Remove default input border */
+    padding: 8px 15px;
+    flex-grow: 1;
+    font-size: 0.9em;
+    color: #333; /* Darker text color */
+    outline: none; /* Remove outline on focus */
+}
+
+.search ::placeholder {
+    color: #999; /* Lighter placeholder color */
+}
+
+.search-button {
+    background-color: transparent; /* No background on button, let parent .search dictate */
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 15px; /* Added padding to button */
+    transition: background-color 0.3s ease;
+}
+
+.search-button i {
+    color: #333; /* Darker icon color */
+    font-size: large;
+}
+
+.search-button:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Slightly darken on hover */
+}
+
+.cell-center {
+    margin-left: 20px; /* Adjusted margin */
+    text-align: right;
+    white-space: nowrap; /* Prevent phone number from breaking */
+}
+
+.cell-center i {
+    margin-right: 5px;
+}
+
+.wishlish-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+    position: relative; /* Important for mini-cart absolute positioning */
+}
+
+.wishlish-icon i {
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+.wishlish-icon i:hover {
+    color: #F8E8E8;
+}
+
+/* Main Navigation Bar */
+.main-nav {
+    background-color: #D99797; /* Light red/pink background */
+    padding: 10px 5%;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main-nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    color: red;
+}
+
+@media (max-width: 1024px){
+    .container{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .search{
+        order: 1;
+        margin: 10px 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo, .cell-center, .wishlish-icon{
+        margin-bottom: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        width: 50%;
+        justify-content: center;
+    }
+
+    .logo, .cell-center{
+        width: auto;
+    }
+
+    .main-nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li{
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        padding: 10px 2%;
+    }
+
+    .logo, .cell-center, .wishlish-icon{
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .cell-center{
+        text-align: center;
+    }
+}
+
+
+.section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 20px auto; /* Centered with auto margins */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
+}
+
+.onlinesupermarket{
+    flex: 1;
+    padding-right: 30px;
+    text-align: left;
+}
+
+.onlinesupermarket h1{
+    font-size: 3em;
+    color: #90ee90;
+    margin-bottom: 10px;
+}
+
+.onlinesupermarket .fresh{
+    font-size: 2em;
+    color: #90ee90 ;
+    margin-bottom: 20px;
+}
+
+.onlinesupermarket .a{
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.onlinesupermarket button{
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Fixed typo: backgroun-color -> background-color */
+}
+
+.onlinesupermarket .off{
+    background-color: #333;
+    color: white;
+}
+
+.buttom a{
+    text-decoration: none;
+    color: white;
+}
+.onlinesupermarket .off:hover{
+    background-color: red;
+    transform: translateY(-5px);
+}
+
+.onlinesupermarket .discover{
+    background-color: #90ee90;
+    color: #333;
+    border: 1px solid red;
+
+}
+
+.onlinesupermarket .buttom{
+    display: flex;
+    gap: 30px;
+}
+
+.onlinesupermarket .discover:hover{
+    background-color: red;
+    transform: translateY(5px);
+}
+
+.menimg{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.menimg img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .onlinesupermarket{
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .onlinesupermarket h1{
+        font-size: 2.5em;
+    }
+
+    .onlinesupermarket .fresh{
+        font-size: 1.8em;
+    }
+
+    .onlinesupermarket .a{
+        font-size: 1em;
+    }
+
+    .onlinesupermarket button{
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.section2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px 50px;
+    max-width: 1200px;
+    margin: 30px auto; /* Centered with auto margins */
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0 ,0, 0, 0.1);
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.freeshipping, .returnforfree, .securepayment, .support{
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    border: 2px solid blanchedalmond;
+    background-color: #D99797;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.freeshipping:hover, .returnforfree:hover, .securepayment:hover, .support:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #90ee90;
+}
+
+.freeshipping h3, .returnforfree h3, .securepayment h3, .support h3{
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.freeshipping p, .returnforfree p, .securepayment p, .support p{
+    font-size: 0.9em;
+    color: #444;
+}
+
+@media (max-width: 768px) {
+    .section2{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .freeshipping, .returnforfree, .securepayment, .support{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+/* Section 3: Special Offer Banners Grid */
+.section3 {
+    display: grid;
+    /* Define named grid areas to match the layout in the image */
+    grid-template-areas:
+        "sauces allchips fullfresh"
+        "sale58 sale58 fullfresh";
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 25px;
+    padding: 30px 5%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.sauces, .allchips, .fullfresh, .sale58 {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex; /* Use flexbox for internal content alignment */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sauces:hover, .allchips:hover, .fullfresh:hover, .sale58:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Assign grid areas and specific background colors */
+.sauces { grid-area: sauces; background-color: #EE4B2B; } /* Red background */
+.allchips { grid-area: allchips; background-color: #F8E8E8; } /* Light pink background */
+.fullfresh { grid-area: fullfresh; background-color: #7DB95C; flex-direction: column; } /* Green background, column layout */
+.sale58 { grid-area: sale58; background-color: #5E5E8A; } /* Dark purple background */
+
+/* Adjust flex direction for each block as per image */
+.sauces, .allchips {
+    flex-direction: row; /* Image on left, text on right */
+    align-items: center; /* Vertically center content */
+}
+
+.sale58 {
+    flex-direction: row; /* Text on left, image on right */
+    align-items: center; /* Vertically center content */
+}
+
+/* Image containers for specific sizing */
+.sauces .img {
+    height: 100%; /* Fill parent height */
+    width: 50%; /* Take half width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* No background */
+}
+
+.sauces img {
+    width: 100%; /* Fill container width */
+    height: 100%; /* Fill container height */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    display: block;
+}
+
+.allchips .img {
+    height: 100%; /* Fill parent height */
+    width: 50%; /* Take half width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.allchips img {
+    max-width: 100%; /* Adjust to fit multiple chip bags */
+    max-height: 100%;
+    object-fit: contain; /* Contain the entire image */
+    display: block;
+    margin: auto;
+}
+
+.fullfresh .img {
+    height: 70%; /* Image takes more height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding-bottom: 10px; /* Space from text */
+}
+
+.fullfresh img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin-bottom: -140px;
+}
+
+.sale58 .img {
+    height: 100%; /* Fill parent height */
+    width: 50%; /* Take half width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.sale58 img {
+    max-width: 100%; /* Adjust size of banana bunch */
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}
+
+/* Text content styling for Section 3 */
+.sauces .offer-text { /* Renamed .50off to .offer-text for consistency */
+    flex: 1; /* Allow text to take remaining space */
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em; /* Larger font size */
+    color: white; /* White text */
+}
+
+.allchips .offer-text { /* Renamed .chips to .offer-text for consistency */
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.8em; /* Larger font size */
+    color: #333; /* Dark text */
+}
+.fullfresh .full, .sale58 .sale {
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.3em;
+    color: white; /* White text for these blocks */
+}
+
+.fullfresh .full{
+    margin-bottom: -100px;
+}
+
+.fullfresh .full button, .sale58 .sale button {
+    background-color: #333; /* Dark grey for buttons */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    margin-bottom: -10px;
+}
+
+.fullfresh .full button:hover, .sale58 .sale button:hover {
+    background-color: #555; /* Slightly lighter grey on hover */
+}
+
+
+/* Section 4: Discover Categories Grid (reusing classes from earlier category discussion) */
+.product-section.category-section-wrapper { /* Combining classes for shared styling */
+    padding: 30px 5%;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product.category-header { /* Combining classes for shared styling */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product.category-header h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+.product.category-header h2 span {
+    color: #4CAF50;
+}
+
+.categories-grid { /* This targets the grid for category cards */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid for categories */
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #e6b3e6; /* Light purple background for cards */
+    border-radius: 12px; /* More rounded corners as in the image */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-8px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category-image-container {
+    width: calc(100% - 20px); /* 10px padding on each side for the image area */
+    height: 120px; /* Fixed height for image area */
+    margin-top: 10px; /* Space from top of card */
+    background-color: #555; /* Dark grey background for the image container itself */
+    border-radius: 8px; /* Rounded corners for the image container */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+    display: block;
+    border-radius: 8px; /* Ensure image itself has rounded corners if container has */
+}
+
+.category-text {
+    padding: 15px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333; /* Dark text for category names */
+    line-height: 1.3;
+    text-align: center;
+}
+
+
+/* Product Section */
+.product-section { /* Renamed from .section5 for consistency with HTML */
+    padding: 60px 5%; /* Added horizontal padding to align with other sections */
+    max-width: 1200px; /* Added max-width to center content */
+    margin: 30px auto; /* Added margin: auto to center */
+
+}
+
+.product-section .product { /* Targeted the div containing h2 and button */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+
+}
+
+.product-section .product h2 { /* Targeted the h2 directly */
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+.product-section .product h2 span { /* Targeted the span inside h2 for specific color */
+    color: #90EE90; /* Light green for "Products" */
+}
+
+.product-section .view { /* Targeted the View All Products button */
+    background-color: #D3D3D3; /* Light grey background */
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-section .view:hover {
+    background-color: #B0B0B0; /* Darker grey on hover */
+    transform: translateY(-2px);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Added gap between grid items */
+    margin-top: 30px;
+}
+
+.product-cart {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: left;
+    position: relative;
+    padding-bottom: 60px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Added background-color transition */
+}
+
+.product-cart a{
+    text-decoration: none ;
+    color: white;
+}
+
+.product-cart:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    background-color: #e0ffe0; /* Changed background color on hover to light green */
+}
+
+.product-image-wrapper { /* Corrected typo from proudct-image-wrapper */
+    position: relative;
+    width: 100%;
+    height: 200px; /* Set a consistent height for images */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+.product-image-wrapper img {
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the space */
+    display: block;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FF5722;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin: 15px 15px 10px 15px;
+    color: #333;
+}
+
+.product-rating {
+    color: #FFC107;
+    margin: 0 15px 10px 15px;
+    font-size: 1.1em;
+}
+
+.product-price {
+    margin: 0 15px 15px 15px;
+    font-size: 1.1em;
+}
+
+.product-price .old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 10px;
+}
+
+.product-price .current-price {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: 1.2em;
+}
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    display: block;
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.product-cart:hover .add-to-cart-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .product-section .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .product-section .product h2 {
+        margin-bottom: 15px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .product-cart {
+        padding-bottom: 50px; /* Adjust padding for smaller screens */
+    }
+    .add-to-cart-btn {
+        width: calc(100% - 20px); /* Adjust width for smaller padding */
+        left: 10px;
+        bottom: 10px;
+    }
+}
+
+/* --- Mini Cart Preview Styles --- */
+#mini-cart-preview {
+    position: absolute; /* Position relative to the nearest positioned ancestor (e.g., .wishlish-icon) */
+    top: 60px; /* Adjust based on your header height and .wishlish-icon position */
+    right: 0; /* Align to the right of .wishlish-icon */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Adjust width as needed */
+    max-height: 400px; /* Limit height and allow scrolling if many items */
+    overflow-y: auto; /* Enable scroll if content overflows */
+    z-index: 1000; /* Ensure it's on top of other content */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hidden from screen readers and interactions */
+    transform: translateY(-10px); /* Slight animation for appearing */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    padding: 15px;
+    box-sizing: border-box; /* Include padding in the width calculation */
+}
+
+#mini-cart-preview.active {
+    opacity: 1; /* Show when active */
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#mini-cart-preview h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.3em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.mini-cart-body {
+    max-height: 250px; /* Max height for scrollable items */
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.mini-cart-empty-message {
+    text-align: center;
+    color: #777;
+    padding: 20px 0;
+    font-style: italic;
+}
+
+.mini-cart-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.mini-cart-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.mini-cart-item-img {
+    width: 5px; /* Small image size */
+    height: 5px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.mini-cart-item-details {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.mini-cart-item-name {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.mini-cart-item-quantity-price {
+    font-size: 0.9em;
+    color: #777;
+}
+
+.mini-cart-item-remove {
+    background: none;
+    border: none;
+    color: #d9534f; /* Red color for remove button */
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.2s ease;
+}
+
+.mini-cart-item-remove:hover {
+    color: #c9302c;
+}
+
+.mini-cart-footer {
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.mini-cart-footer p {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#mini-cart-total-price {
+    color: #943434; /* Match your main theme color */
+}
+
+.mini-cart-footer .btn { /* Styling for the "View Cart" button */
+    display: inline-block;
+    background-color: #943434; /* Your theme red */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.mini-cart-footer .btn:hover {
+    background-color: #7a2b2b; /* Darker red on hover */
+}
+
+/* --- Cart Icon Number Styling --- */
+.cart-icon {
+    position: relative;
+    display: inline-flex; /* Use flex to align icon and count */
+    align-items: center;
+    margin-left: 20px;
+}
+
+#cart-item-count {
+    background-color: yellow; /* Light pink from your nav */
+    color: #943434; /* Your theme red */
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 0.8em;
+    font-weight: bold;
+    position: absolute;
+    top: -15px; /* Adjust to position correctly relative to icon */
+    right: -30px; /* Adjust to position correctly relative to icon */
+    min-width: 20px; /* Ensure it's a circle even with single digit */
+    text-align: center;
+    line-height: 1.2; /* Center vertically */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* --- Added-to-cart message styling --- */
+.add-to-cart-success-message {
+    color: #28a744; /* Green color for success message */
+    font-size: 0.9em;
+    margin-left: 5px;
+    white-space: nowrap; /* Keep message on one line */
+}
+
+.product a{
+    text-decoration: none;
+}
+
+/* --- Responsive adjustments for mini-cart on smaller screens --- */
+@media (max-width: 768px) {
+    #mini-cart-preview {
+        width: 90%; /* Make it wider on smaller screens */
+        left: 5%; /* Center it roughly */
+        right: auto;
+        top: 120px; /* Adjust top position if header height changes on mobile */
+        transform: translateX(0) translateY(-10px); /* Reset horizontal transform */
+    }
+
+    /* Adjust cart count position if needed for smaller headers */
+    .cart-icon #cart-item-count {
+        top: -2px;
+        right: -8px;
+    }
+}

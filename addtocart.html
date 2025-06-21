@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Supermarket - Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="CSS/addtocart.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <a href="main.html">Online Market</a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder ="What are you looking for?">
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="cell-center">
+                <i class="fa-solid fa-phone-volume"></i>
+                Cell center<br> 0692222888
+            </div>
+            <div class="wishlish-icon">
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-user"></i>
+                <a href="addtocart.html" class="cart-icon"><i class="fa-solid fa-shopping-cart"></i> <span id="cart-item-count">0</span></a>
+            </div>
+        </div>
+
+        <div class="main-nav">
+            <ul>
+                <li><a href="newproduct.html">New Products</a></li>
+                <li><a href="#">Best Sales</a></li>
+                <li><a href="#">Special Offers</a></li>
+                <li><a href="#">Quick find</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Daily Offers</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="cart-section">
+        <div class="cart-title">Cart</div>
+
+        <div class="cart-progress">
+            <div><span style="color: blue;">1. Shopping Cart</span> <span class="arrow">&#8594;</span></div>
+            <div><a href="checkdetail.html">2. Checkout Detail</a> <span class="arrow">&#8594;</span></div>
+            <div>3. Order Complete</div>
+        </div>
+
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+
+        <div class="cart-actions">
+            <div class="coupon-section">
+                <input type="text" placeholder="Coupon code">
+                <button>Apply Coupon</button>
+            </div>
+            <div class="action-buttons-right">
+                <a href="main.html#best-seller-products-section" class="continue-shopping-button btn-style">Continue shopping</a>
+                <button class="clear-cart-button">Clear Cart</button>
+            </div>
+        </div>
+
+        <div class="bottom-sections">
+            <div class="interested-products">
+                <h3>You may be interested</h3>
+                <div class="product-list">
+                    <div class="product-card">
+                        <img src="Image/Durian.jpg" alt="appple" style="width: 150px; height: 150px;">
+                        <div class="name">Natural Durian</div>
+                        <div class="price">Price <span>$15.00</span></div>
+                    </div>
+                    <div class="product-card">
+                        <img src="Image/Strawberries.jpg" alt="pineapple" style="width: 150px; height: 150px;">
+                        <div class="name">Natural Strawberries</div>
+                        <div class="price">Price <span>$8.50</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-totals">
+                <h3>Cart Totals</h3>
+                <div class="totals-row">
+                    <span>Subtotal</span>
+                    <span class="cart-subtotal">$0.00</span>
+                </div>
+                <div class="totals-row total">
+                    <span>Total</span>
+                    <span class="cart-total">$0.00</span>
+                </div>
+                <button class="proceed-button"><a href="checkdetail.html">Proceed to checkout</a></button>
+            </div>
+        </div>
+    </div>
+    <script src="JAVA_SCRIPT/addtocart.js"></script>
+</body>
+</html>
